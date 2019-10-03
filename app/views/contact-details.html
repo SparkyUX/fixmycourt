@@ -1,0 +1,50 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="formal-complaint" method="post" novalidate>
+
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Let us know how we can contact you
+            </h1>
+            <span id="email-hint" class="govuk-hint">
+              We’ll only use your email or phone number to contact you with a response
+            </span>
+          </legend>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="email">
+              Email address
+            </label>
+            <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="telephone-number">
+              UK telephone number
+            </label>
+            <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel">
+          </div>
+
+          <div class="govuk-form-group">
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact-agree" name="contact-agree" type="checkbox" value="contact-agree">
+                <label class="govuk-label govuk-checkboxes__label" for="contact-agree">
+                  I agree to being contacted
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <button class="govuk-button" data-module="govuk-button">
+          Next
+        </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

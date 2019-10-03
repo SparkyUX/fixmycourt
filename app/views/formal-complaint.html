@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/formal-complaint-yes-no" method="post">
+
+      <h1 class="govuk-heading-l">
+      If you are unhappy with our service you can raise a formal complaint with us
+      </h1>
+      <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+          <h2 class="govuk-heading-m">
+            Do you want to make a formal complaint?        
+          </h2>
+        </legend>
+        <p class="govuk-body">
+          We will contact you by email or phone to respond to what you have told us
+        </p>
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="formal-complaint-yes" name="formal-complaint" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="formal-comlaint-yes">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="formal-complaint-no" name="formal-complaint" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="formal-complaint-no">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      </div>
+      <br>
+      <button class="govuk-button" data-module="govuk-button" type="submit">
+        Next
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

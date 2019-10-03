@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+      Contact us about your experience
+      </h1>
+
+      <p class="govuk-body">
+        We welcome comments from everyone about how we are doing. If you have something to say about one of our courts this is the place to do it. 
+      </p>
+
+      <p class="govuk-body">
+        Anything you tell us will not affect your case and your comments won't be shared with anyone involved in your case.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        Please select the court you would like to contact us about
+      </h2>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="court-selector">
+          Select a court
+        </label>
+        <form action="/court-selection" method="post">
+
+          <select class="govuk-select" id="court-name" name="court-name">
+            <option value="Basildon Court">Basildon Court</option>
+            <option value="Reading County Court">Reading County Court</option>
+            <option value="London County Court">London County Court</option>
+          </select>
+          <br>
+          <p></p>
+          <button  type="submit" class="govuk-button" data-module="govuk-button" >
+            Select
+          </button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,148 @@
+
+{% extends "layout.html" %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+    Tell us about {{courtName}}
+    </h1>
+      <form action="more-information" method="post" novalidate>
+
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+          What do you want to contact us about?
+          </h1>
+        </legend>  
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+
+          <div class="govuk-checkboxes__item">
+            <label class="govuk-label govuk-checkboxes__label" for="facilities-checkbox">
+              <div class="govuk-panel govuk-panel--confirmation" style="background-color: #1d70b8">
+                <div class="govuk-panel__body">
+                  Facilities and buildings
+               </div>
+              </div>
+            </label>
+            <input class="govuk-checkboxes__input" name="facilities-checkbox" type="checkbox" value="facilities-checkbox">
+          </div>
+        </div>
+        <div class="govuk-grid-column-one-third">
+         <div class="govuk-checkboxes__item">
+            <label class="govuk-label govuk-checkboxes__label imgcheckbox" for="experience-checkbox">
+              <div class="govuk-panel govuk-panel--confirmation" style="background-color: #1d70b8; height: 100%">
+                <div class="govuk-panel__body">
+                  Your experience
+               </div>
+              </div>
+            </label>
+            <input class="govuk-checkboxes__input" name="experience-checkbox" type="checkbox" value="experience-checkbox">
+          </div>
+        </div>
+        <div class="govuk-grid-column-one-third">
+
+          <div class="govuk-checkboxes__item">
+            <label class="govuk-label govuk-checkboxes__label imgcheckbox" for="experience-checkbox">
+              <div class="govuk-panel govuk-panel--confirmation" style="background-color: #1d70b8; height: 100%">
+                <div class="govuk-panel__body">
+                  Staff
+               </div>
+              </div>
+            </label>
+            <input class="govuk-checkboxes__input" name="experience-checkbox" type="checkbox" value="experience-checkbox">
+          </div>
+        </div>
+        </div>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+
+          <div class="govuk-checkboxes__item">
+            <label class="govuk-label govuk-checkboxes__label" for="security-checkbox">
+              <div class="govuk-panel govuk-panel--confirmation" style="background-color: #1d70b8">
+                <div class="govuk-panel__body">
+                  Security
+               </div>
+              </div>
+            </label>
+            <input class="govuk-checkboxes__input" name="security-checkbox" type="checkbox" value="security-checkbox">
+          </div>
+        </div>
+        <div class="govuk-grid-column-one-third">
+        <div class="govuk-checkboxes__item">
+         <div class="govuk-grid-column-one-third">
+            <label class="govuk-label govuk-checkboxes__label imgcheckbox" for="information-checkbox">
+              <div class="govuk-panel govuk-panel--confirmation" style="background-color: #1d70b8; height: 100%">
+                <div class="govuk-panel__body">
+                  Information and guidance
+               </div>
+              </div>
+            </label>
+            <input class="govuk-checkboxes__input" name="information-checkbox" type="checkbox" value="information-checkbox">
+          </div>
+        </div>
+      </div>          
+      <div class="govuk-grid-column-one-third">
+          <div class="govuk-checkboxes__item">
+            <label class="govuk-label govuk-checkboxes__label" for="other-checkbox">
+              <div class="govuk-panel govuk-panel--confirmation" style="background-color: #1d70b8; height: 100%">
+                <div class="govuk-panel__body">
+                  Other
+               </div>
+              </div>
+            </label>
+            <input class="govuk-checkboxes__input" name="other-checkbox" type="checkbox" value="other-checkbox">
+          </div>
+        </div>
+      </div>
+      </fieldset>
+      <br>
+      <button class="govuk-button" data-module="govuk-button" type="submit">
+        Next
+      </button>
+      </form>
+  </div>
+</div>
+{% endblock %}
+
+<!--
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Organisation
+      </h1>
+    </legend>
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          <img src="public/images/facilities.jpg" alt="facilities" width="100%">
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          Employment Tribunal
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          Ministry of Defence
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          Department for Transport
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+-->

@@ -8,81 +8,62 @@
     <h1 class="govuk-heading-l">
     Tell us about {{courtName}}
     </h1>
-    <div class="govuk-grid-row">
       <form action="more-information" method="post" novalidate>
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h1 class="govuk-fieldset__heading">
-          What do you want to contact us about?
+          What do you want to tell us about?
           </h1>
-        </legend>     
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-third" id="facilities">
-            <img src="public/images/facilities.jpg" alt="facilities" width="100%">
-            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        </legend>  
+          <span id="court-select" class="govuk-hint">
+            Select all that apply.
+          </span>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Facilities and buildings
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Your experience
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Staff
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Security
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Information and guidance
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Other
+              </label>
+            </div>
           </div>
-          <div class="govuk-grid-column-one-third" id="service">
-            <img src="public/images/service.jpg" alt="Service" width="100%">
-          </div>
-          <div class="govuk-grid-column-one-third" id="staff">
-            <img src="public/images/staff.jpg" alt="Staff" width="100%">
-          </div>
-        </div>
+        </fieldset>
         <br>
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-third" id="my-case">
-            <img src="public/images/my-case.jpg" alt="my-case" width="100%">
-          </div>
-          <div class="govuk-grid-column-one-third" id="infoAndGuidance">
-            <img src="public/images/info-and-guidance.jpg" alt="Information and guidance" width="100%">
-          </div>
-          <div class="govuk-grid-column-one-third" id="other">
-            <img src="public/images/other.jpg" alt="Other" width="100%">
-          </div>
-        </div>
-        <br>
-        <button class="govuk-button" data-module="govuk-button" type="submit">
-        Next
+        <button class="govuk-button" data-module="govuk-button">
+          Next
         </button>
-      </fieldset>
-    </div>
+    </form>
+
   </div>
 </div>
 
 {% endblock %}
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-      <h1 class="govuk-fieldset__heading">
-        Organisation
-      </h1>
-    </legend>
-    <div class="govuk-checkboxes govuk-checkboxes--small">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-          HM Revenue and Customs (HMRC)
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-          Employment Tribunal
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
-          Ministry of Defence
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
-        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
-          Department for Transport
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>

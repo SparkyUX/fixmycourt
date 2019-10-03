@@ -6,8 +6,8 @@ const router = express.Router()
 router.post('/court-selection', function (req, res) {
 
   let courtSelected = req.session.data['court-name']
-
-  res.render('select-topic',{ 'courtName' : courtSelected })
+  global.gCourtName = courtSelected;
+  res.render('select-topic',{ 'courtName' : gCourtName })
 
 })
 
@@ -39,7 +39,7 @@ router.post('/response-required-yes-no', function (req, res) {
 	}
 
     else {
-    res.redirect('thank-you')
+    res.redirect('formal-complaint')
 	}
 })
 

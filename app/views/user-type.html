@@ -1,0 +1,40 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+     What brought you to court?
+    </h1>
+    <div class="govuk-form-group">
+      <form action="response-required" method="post">
+
+        <select class="govuk-select" id="user-type" name="user-type">
+          <option value="appellant">Appellant / applicant / claimant</option>
+          <option value="defendant">Defendant / respondent</option>
+          <option value="legal-representative">Legal representative</option>
+          <option value="member-of-public">Member of the public</option>
+          <option value="third-party">Third party</option>
+          <option value="juror">Juror</option> 
+          <option value="non-prof-support">Non professional support</option>     
+          <option value="victim">Victim</option>
+          <option value="professiona-user">Professional user (e.g. Barrister)</option>
+          <option value="witness">Witness</option>
+          <option value="mp">MP or councillor</option>
+          <option value="other">Other</option>
+
+        </select>
+        <br>
+        <p></p>
+        <button  type="submit" class="govuk-button" data-module="govuk-button" >
+          Select
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

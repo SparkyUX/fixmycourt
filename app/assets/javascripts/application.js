@@ -8,11 +8,3 @@ if (window.console && window.console.info) {
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
-
-object.onclick = function(){imgBorder};
-document.getElementById("image-container").onclick = function() {imgBorder()};
-
-function imgBorder() {
-            opacity:0.5;
-            border-style: solid;
-}
